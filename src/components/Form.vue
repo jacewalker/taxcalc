@@ -39,9 +39,11 @@
         <div id="salaryHelp" class="form-text">We'll never share your information with anyone else.</div>
     </div>
     <div class="mb-3">
-        <label class="form-label"> Your Net Income is:  {{ calculateGross(salary) }}</label>
+        <label class="form-label"> Annual Net Income:  ${{ Math.floor(calculateGross(salary)) }}</label> <br/>
+        <label class="form-label"> Monthly Net Income:  ${{ Math.floor((calculateGross(salary)/12)) }}</label> <br/>
+        <label class="form-label"> Weekly Net Income:  ${{ Math.floor((calculateGross(salary)/52)) }}</label> <br/>
     </div>
-    <button @click="calculateGross()" class="btn btn-secondary">Submit</button>
+    <!-- <button @click="calculateGross()" class="btn btn-secondary">Submit</button> -->
     </form>
 
 </template>
